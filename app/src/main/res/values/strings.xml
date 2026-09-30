@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">מצב שבת</string>
+    <string name="home_title">מצב שבת</string>
+    <string name="duration_shabbat">שבת · 26 שעות</string>
+    <string name="duration_shabbat_yomtov">שבת + חג · 50 שעות</string>
+    <string name="duration_three_days">שלושה ימים · 74 שעות</string>
+    <string name="action_activate">הפעל מצב שבת</string>
+    <string name="action_deactivate">כבה מצב שבת</string>
+    <string name="action_open_clock">פתח שעון</string>
+    <string name="status_active_until">פעיל עד %1$s</string>
+    <string name="warn_missing_permissions">חסרות הרשאות - מדריך התקנה:</string>
+    <string name="warn_secure_settings">הגדרות מערכת: ללא הרשאה</string>
+    <string name="warn_dnd">נא לא להפריע: ללא הרשאה</string>
+    <string name="warn_overlay">חזרה אוטומטית לשעון: ללא הרשאה</string>
+    <string name="notif_channel_name">שומר מצב שבת</string>
+    <string name="notif_title">מצב שבת פעיל</string>
+    <string name="notif_text">השעון מוצג בלבד. כיבוי דרך האפליקציה.</string>
+    <string name="candles_emoji" translatable="false">🕯️🕯️</string>
+    <string name="candles_content_description">נרות שבת</string>
+    <string name="parsha_format">פרשת %1$s</string>
+    <string name="title_separator" translatable="false"> · </string>
+    <string name="zman_candle_lighting">הדלקת נרות %1$s</string>
+    <string name="zman_shabbat_ends">צאת שבת %1$s</string>
+    <string name="zman_holiday_ends">צאת החג %1$s</string>
+    <string name="setting_city">עיר: %1$s</string>
+    <string name="setting_candle_minutes">הדלקה: %1$d דק׳ לפני השקיעה</string>
+    <string name="picker_city_title">בחירת עיר</string>
+    <string name="picker_candle_title">הדלקת נרות</string>
+    <string name="candle_minutes_format">%1$d דקות</string>
+</resources>

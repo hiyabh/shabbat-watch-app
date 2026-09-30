@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Shabbat Mode</string>
+    <string name="home_title">Shabbat Mode</string>
+    <string name="duration_shabbat">Shabbat · 26 h</string>
+    <string name="duration_shabbat_yomtov">Shabbat + Yom Tov · 50 h</string>
+    <string name="duration_three_days">Three days · 74 h</string>
+    <string name="action_activate">Activate Shabbat mode</string>
+    <string name="action_deactivate">Deactivate Shabbat mode</string>
+    <string name="action_open_clock">Open clock</string>
+    <string name="status_active_until">Active until %1$s</string>
+    <string name="warn_missing_permissions">Missing permissions - setup guide:</string>
+    <string name="warn_secure_settings">System settings: not granted</string>
+    <string name="warn_dnd">Do not disturb: not granted</string>
+    <string name="warn_overlay">Auto-return to clock: not granted</string>
+    <string name="notif_channel_name">Shabbat mode guard</string>
+    <string name="notif_title">Shabbat mode active</string>
+    <string name="notif_text">Clock only. Turn off from the app.</string>
+    <string name="candles_content_description">Shabbat candles</string>
+    <string name="parsha_format">Parashat %1$s</string>
+    <string name="zman_candle_lighting">Candle lighting %1$s</string>
+    <string name="zman_shabbat_ends">Shabbat ends %1$s</string>
+    <string name="zman_holiday_ends">Holiday ends %1$s</string>
+    <string name="setting_city">City: %1$s</string>
+    <string name="setting_candle_minutes">Candles: %1$d min before sunset</string>
+    <string name="picker_city_title">Choose city</string>
+    <string name="picker_candle_title">Candle lighting</string>
+    <string name="candle_minutes_format">%1$d minutes</string>
+</resources>
