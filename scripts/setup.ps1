@@ -57,6 +57,7 @@ Write-Host "== Granting one-time permissions =="
 & $adb -s $device shell appops set $Package SYSTEM_ALERT_WINDOW allow
 & $adb -s $device shell appops set $Package WRITE_SETTINGS allow
 & $adb -s $device shell pm grant $Package android.permission.POST_NOTIFICATIONS
+& $adb -s $device shell dumpsys deviceidle whitelist +$Package
 
 & $adb -s $device shell am start -n "$Package/.MainActivity" | Out-Null
 Write-Host "Done. The app is open on the watch; no red warning on its home screen means all permissions were granted."

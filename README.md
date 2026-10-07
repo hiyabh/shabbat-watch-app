@@ -22,10 +22,11 @@
 
 1. שומרת את הערכים הנוכחיים של ההגדרות שהיא עומדת לשנות
 2. מפעילה "נא לא להפריע" מלא (אין צלילים, רטט או התראות)
-3. מכבה "הרם יד להערה" ו"גע להערה", ומדליקה Always-On Display
-4. מתזמנת כיבוי אוטומטי (26 / 50 / 74 שעות לפי הבחירה)
-5. מפעילה שירות רקע שמחזיר את מסך השעון אם נלחץ כפתור פיזי
-6. פותחת את מסך השעון (עמום אחרי כמה שניות)
+3. מכבה "הרם יד להערה" ו"גע להערה" ואת הבהירות האוטומטית, ומדליקה Always-On Display
+4. מאריכה את "הצגת האפליקציה האחרונה" לכל משך השבת, כדי שהשעון לא יחזור לפני-השעון הרגילים
+5. מתזמנת כיבוי אוטומטי (26 / 50 / 74 שעות לפי הבחירה)
+6. מפעילה שירות רקע שמחזיר את מסך השעון אם נלחץ כפתור פיזי
+7. פותחת את מסך השעון (עמום אחרי כמה שניות)
 
 ## מה מוצג על המסך
 
@@ -74,6 +75,7 @@ adb shell cmd notification allow_dnd il.hiya.shabbatwatch
 adb shell appops set il.hiya.shabbatwatch SYSTEM_ALERT_WINDOW allow
 adb shell appops set il.hiya.shabbatwatch WRITE_SETTINGS allow
 adb shell pm grant il.hiya.shabbatwatch android.permission.POST_NOTIFICATIONS
+adb shell dumpsys deviceidle whitelist +il.hiya.shabbatwatch
 ```
 
 אחרי ההתקנה אפשר לכבות את Wireless debugging. ההרשאות נשמרות גם אחרי עדכון גרסה.

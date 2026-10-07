@@ -197,6 +197,7 @@ private fun PermissionWarnings(permissions: PermissionStatus) {
         if (!permissions.secureSettings) add(stringResource(R.string.warn_secure_settings))
         if (!permissions.dnd) add(stringResource(R.string.warn_dnd))
         if (!permissions.overlay) add(stringResource(R.string.warn_overlay))
+        if (!permissions.batteryUnrestricted) add(stringResource(R.string.warn_battery))
         add(Constants.GUIDE_URL)
     }
     Text(

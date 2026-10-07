@@ -13,6 +13,7 @@
     <string name="warn_secure_settings">System settings: not granted</string>
     <string name="warn_dnd">Do not disturb: not granted</string>
     <string name="warn_overlay">Auto-return to clock: not granted</string>
+    <string name="warn_battery">Battery optimisation exemption: missing</string>
     <string name="notif_channel_name">Shabbat mode guard</string>
     <string name="notif_title">Shabbat mode active</string>
     <string name="notif_text">Clock only. Turn off from the app.</string>

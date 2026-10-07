@@ -1,6 +1,7 @@
 package il.hiya.shabbatwatch.mode
 
 import android.content.Context
+import android.os.PowerManager
 import android.provider.Settings
 import android.util.Log
 import il.hiya.shabbatwatch.Constants
@@ -14,9 +15,15 @@ import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-/** Which one-time adb grants are present. All three are needed for the full experience. */
-data class PermissionStatus(val secureSettings: Boolean, val dnd: Boolean, val overlay: Boolean) {
-    val allGranted: Boolean get() = secureSettings && dnd && overlay
+/** Which one-time adb grants are present. All of them are needed for the full experience. */
+data class PermissionStatus(
+    val secureSettings: Boolean,
+    val dnd: Boolean,
+    val overlay: Boolean,
+    /** Exempt from battery optimisation, so the guard service is not stopped during Shabbat. */
+    val batteryUnrestricted: Boolean,
+) {
+    val allGranted: Boolean get() = secureSettings && dnd && overlay && batteryUnrestricted
 }
 
 /**
@@ -97,6 +104,8 @@ class ShabbatModeController(context: Context) {
         secureSettings = settings.hasPermission(),
         dnd = dnd.hasAccess(),
         overlay = Settings.canDrawOverlays(appContext),
+        batteryUnrestricted = appContext.getSystemService(PowerManager::class.java)
+            .isIgnoringBatteryOptimizations(appContext.packageName),
     )
 
     private suspend fun runLogged(name: String, block: suspend () -> Unit) {

@@ -5,6 +5,15 @@
 
 ## [Unreleased]
 
+## [0.3.1] - 2026-10-07
+
+### Fixed (תוקן)
+- מסך השבת נעלם אחרי זמן מה ועבר לפני-השעון הרגילים: הטיימר "הצגת האפליקציה האחרונה" (20 שנ') מוארך ל-96 שעות בזמן שבת ומשוחזר בכיבוי - [Constants](app/src/main/java/il/hiya/shabbatwatch/Constants.kt)
+- הבהירות השתנתה לפי האור כשחושפים את המסך: הבהירות האוטומטית נכבית בזמן שבת ומשוחזרת בכיבוי
+
+### Added (תוסף)
+- פטור מחיסכון סוללה בהתקנה, ואזהרה במסך הבית אם הוא חסר - [ShabbatModeController](app/src/main/java/il/hiya/shabbatwatch/mode/ShabbatModeController.kt)
+
 ## [0.3.0] - 2026-09-30
 
 גרסה ראשונה להפצה ציבורית (APK חתום ב-GitHub Releases).

@@ -14,8 +14,8 @@ android {
         applicationId = "il.hiya.shabbatwatch"
         minSdk = 34
         targetSdk = 34
-        versionCode = 4
-        versionName = "0.3.0"
+        versionCode = 5
+        versionName = "0.3.1"
     }
 
     // Release signing is read from keystore.properties (not in git, see keystore.properties.example).

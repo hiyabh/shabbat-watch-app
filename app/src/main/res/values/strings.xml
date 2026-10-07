@@ -13,6 +13,7 @@
     <string name="warn_secure_settings">הגדרות מערכת: ללא הרשאה</string>
     <string name="warn_dnd">נא לא להפריע: ללא הרשאה</string>
     <string name="warn_overlay">חזרה אוטומטית לשעון: ללא הרשאה</string>
+    <string name="warn_battery">פטור מחיסכון סוללה: חסר</string>
     <string name="notif_channel_name">שומר מצב שבת</string>
     <string name="notif_title">מצב שבת פעיל</string>
     <string name="notif_text">השעון מוצג בלבד. כיבוי דרך האפליקציה.</string>

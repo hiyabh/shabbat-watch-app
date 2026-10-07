@@ -33,6 +33,11 @@ private const val DEFAULT_CANDLE_MINUTES = 20
 private const val JERUSALEM_CANDLE_MINUTES = 40
 private const val HAIFA_CANDLE_MINUTES = 30
 
+/** Longer than the longest Shabbat-mode duration (74 h), so the "show last app" timer never expires. */
+private const val SHOW_LAST_APP_HOURS = 96L
+private const val SHOW_LAST_APP_SECONDS = (SHOW_LAST_APP_HOURS * 3600).toString()
+private const val AUTO_RESUME_TIMEOUT_MILLIS = (SHOW_LAST_APP_HOURS * 3600 * 1000).toString()
+
 private fun city(
     name: String,
     latitude: Double,
@@ -132,5 +137,13 @@ object Constants {
         // Secure namespace wake gestures.
         ManagedSetting(SettingsNamespace.SECURE, "wake_gesture_enabled", "0"),
         ManagedSetting(SettingsNamespace.SECURE, "double_tap_to_wake", "0"),
+        // Auto brightness off: the light sensor must not brighten the screen when it is uncovered.
+        ManagedSetting(SettingsNamespace.SYSTEM, "screen_brightness_mode", "0"),
+        // "Show last app": in ambient, sysui (AmbientTaskStackManager) returns to the watch face once
+        // this timer runs out (20 s by default, seconds). Launching an activity while dozing wakes
+        // the screen, so the guard cannot repair that later - the timer must outlast Shabbat.
+        ManagedSetting(SettingsNamespace.GLOBAL, "setting_show_last_app_within_time", SHOW_LAST_APP_SECONDS),
+        // AOSP counterpart of the same timer (milliseconds).
+        ManagedSetting(SettingsNamespace.GLOBAL, "wear_activity_auto_resume_timeout_ms", AUTO_RESUME_TIMEOUT_MILLIS),
     )
 }

@@ -18,6 +18,9 @@ Write-Host "== WRITE_SETTINGS app-op (system namespace, e.g. screen timeout) =="
 Write-Host "== POST_NOTIFICATIONS (guard service notification) =="
 & $adb shell pm grant $pkg android.permission.POST_NOTIFICATIONS
 
+Write-Host "== Battery optimisation exemption (keeps the guard service alive all Shabbat) =="
+& $adb shell dumpsys deviceidle whitelist +$pkg
+
 Write-Host "== Verify =="
 & $adb shell dumpsys package $pkg | Select-String "WRITE_SECURE_SETTINGS|POST_NOTIFICATIONS"
 & $adb shell appops get $pkg SYSTEM_ALERT_WINDOW
